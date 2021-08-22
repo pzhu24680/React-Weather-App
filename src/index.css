@@ -1,13 +1,144 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.weather-box p {
+  font-size: 13vmin;
+  color: white;
+}
+.weather-box h1 {
+  color: white;
+  font-size: 10vmin;
+  font-family: "Garamond";
+}
 
+.weather-box {
+  min-height: 70%;
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(224, 219, 219, 0.8);
+  margin: auto;
+  box-shadow: 5px 5px 5px rgba(100, 95, 95, 0.8);
+  border-radius: 30px;
+}
+
+.cloud {
+  color: rgb(175, 170, 170);
+}
+
+.search-bar {
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  height: 32px;
+  margin-left: 39%;
+  border-radius: 20px;
+}
+
+#state {
+  width: 5vw;
+}
+
+#states datalist {
+  width: 5vw;
+}
+
+.nav-link {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.sun {
+  color: rgb(247, 237, 137);
+}
+.current-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-image {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/26/Sunny_day_in_India.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* display:grid;
+  text-align: center; */
+  /* justify-content: center;
+  align-items: center; */
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.hourly-wrapper {
+  display: grid;
+  grid-gap: 1vh;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.daily-wrapper {
+  display: grid;
+  grid-gap: 1vh;
+  grid-template-rows: repeat(8, 1fr);
+  height: 100vh;
+}
+
+.hourly-cell {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 2px rgba(100, 95, 95, 0.8);
+  background-color: rgb(224, 219, 219, 0.8);
+  border-radius: 20px;
+}
+.daily-cell {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  text-align: left !important;
+}
+
+.large-fontsize {
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.medium-fontsize {
+  font-size: 20px;
+}
+
+.hourly-cell h1 {
+  font-size: 5vmin;
+}
+
+.right {
+  position: absolute;
+  margin-right: 150px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+span + span {
+  margin-left: 10vh;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
 }
