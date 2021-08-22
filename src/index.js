@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSun ,faCloud, faCloudShowersHeavy, faSearch, faCog, faBolt, faSnowflake, faSmog ,faCloudRain} from '@fortawesome/free-solid-svg-icons'
 import reportWebVitals from './reportWebVitals';
