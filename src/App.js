@@ -1,7 +1,7 @@
 import "./App.css";
 
 import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Weather from "./components/weather";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "bootstrap/dist/css/bootstrap.css";
@@ -41,7 +41,7 @@ const App = () => {
   };
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
         <Switch>
           <Route
@@ -73,7 +73,7 @@ const App = () => {
           <Redirect from="/" exact to="/weather" />
           <Redirect to="/not-found" />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </React.Fragment>
   );
 };

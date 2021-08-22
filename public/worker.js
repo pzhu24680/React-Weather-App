@@ -1,6 +1,6 @@
 async function getFutureWeatherTypes(API_KEY, city, country, state = "") {
   const data = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${API_KEY}`
   ).then((promise) => promise.json());
   const detailedData = await fetch(
     `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${API_KEY}`

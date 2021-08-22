@@ -3,7 +3,7 @@ const {REACT_APP_API_KEY}=process.env;
 export const loadWeather=(city,country,state='')=>{
     return (dispatch)=>{
         dispatch({type:"WEATHER_REQUEST_SENT",})
-        return http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${REACT_APP_API_KEY}`)
+        return http.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&appid=${REACT_APP_API_KEY}`)
         .then(response=>{return http.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${REACT_APP_API_KEY}`)})
         .then(response=>{dispatch(setWeatherSuccess(response.data))})
         .catch((error)=>{dispatch(setWeatherFailure(error))})
