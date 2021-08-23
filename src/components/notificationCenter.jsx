@@ -22,7 +22,7 @@ const NotificationCenter = () => {
   const createNotification = ({ type, time, location,}) => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
-        const myWorker = new Worker(process.env.PUBLIC_URL+"worker.js");
+        const myWorker = new Worker(process.env.PUBLIC_URL+"/worker.js");
         myWorker.postMessage({ type, time, location,REACT_APP_API_KEY});
         new Notification("Notification Created Successfully!");
       }
